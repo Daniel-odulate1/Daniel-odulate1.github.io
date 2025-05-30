@@ -279,5 +279,7 @@ body{
 }
 
 @Media (max-width: 768) {
-    
+    .navbar{
+        display:none;
+    }
 }
