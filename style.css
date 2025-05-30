@@ -52,7 +52,6 @@ body{
 }
 .home{
     height: 100vh;
-    background: url('profile\ portfolio.pn') no-repeat;
     background-size: contain;
     background-position-x: right;
     display: flex;
@@ -277,4 +276,8 @@ body{
     100%{
         pointer-events: auto;
     }
+}
+
+@Media (max-width: 768) {
+    
 }
