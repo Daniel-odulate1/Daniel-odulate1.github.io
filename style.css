@@ -8,27 +8,35 @@
     font-family: 'Old Standard TT', serif;
 }
 body{
+    display: flex;
+    position: relative;
+    flex-direction: row;
     background-color: #081b29;
-    color: #ededed;
+    color: #d3d3d3;
 }
 .header{
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     padding: 20px;
-    background-color: transparent;
+    background-color: #081b296a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    cursor: pointer;
 }
 .logo{
     position: relative;
     font-size: 24px;
     font-weight: 600;
-    font-family: cursive;
-    color: #ededed;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    color: #d3d3d3;
     text-decoration: none;
+}
+.logo:hover{
+    color: #00abf0;
 }
 .logo::before{
     content: '';
@@ -44,7 +52,7 @@ body{
 .navbar a{
     font-size: 19px;
     font-weight: 500;
-    color: #ededed;
+    color: #d3d3d3;
     margin-left: 35px;
     text-decoration: none;
 }
@@ -53,9 +61,6 @@ body{
 }
 .home{
     height: 100vh;
-    background: url('profile\ portfolio.pn') no-repeat;
-    background-size: contain;
-    background-position-x: right;
     display: flex;
     align-items: center;
 }
@@ -102,6 +107,9 @@ body{
     position: relative;
     font-size: 19px;
     margin:20px 0 40px;
+}
+.home-content p a{
+    display: none;
 }
 .home-content p::before{
     content: '';
@@ -180,6 +188,10 @@ body{
 .btn-box a:hover::before{
     width: 100%;
 }
+.message{
+    position: relative;
+    top: 20px;
+}
 .home-sci{
     position: absolute;
     left: 3%;
@@ -236,6 +248,25 @@ body{
     width: 100%;
 }
 
+.home-img{
+    display: flex;
+    position: relative;
+    right: 0;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+}
+.profile-img{
+    right: 0;
+    top: 10%;
+    border-radius: 50%;
+    height: 350px;
+    width: 300px;
+    left: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 
 /* KEYFRAMES ANIMATION */
 @keyframes showRight{
@@ -249,8 +280,9 @@ body{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 620px){
     body{
+        display: flex;
         overflow-x: hidden;
     }
     .header{
@@ -269,7 +301,7 @@ body{
         font-size: 22px;
     }
     .home-content h1{
-        font-size: 25px;
+        font-size: 26px;
     }
     .home{
         background-position-x: left;
@@ -278,7 +310,17 @@ body{
         font-size: 25px;
     }
     .home-content p{
-        font-size: 12px;
+        font-size: 15px;
+    }
+    .home-content p a{
+        display: inline-block;
+        font-size: 16px;
+        color: #00abf0;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    .home-img{
+        display: none;
     }
     @keyframes showRight{
     100% {
